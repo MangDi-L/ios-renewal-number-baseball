@@ -146,26 +146,26 @@ struct NumberBaseballGame {
     }
 
     mutating func selectMenu() {
-        let gameStart = "1"
-        let gameExit = "2"
-        var exitSelectMenu = false
+        let gameStartNumber = 1
+        let gameExitNumber = 2
+        var isExitSelectMenu = false
 
-        while exitSelectMenu == false {
+        while isExitSelectMenu == false {
             tryNumber = 9
             print("1. 게임시작")
             print("2. 게임종료")
             print("원하는 기능을 선택해 주세요",terminator: " ")
 
-            guard let menuInput = readLine() else {
-                continue
-            }
-            let menu = menuInput.replacingOccurrences(of: " ", with: "")
+            guard let menuInput = readLine() else { continue }
 
-            if menu == gameStart {
+            let userChoiceMenuNumber = Int(menuInput.replacingOccurrences(of: " ", with: ""))
+
+
+            if userChoiceMenuNumber == gameStartNumber {
                 startBaseBallGame()
-            } else if menu == gameExit {
+            } else if userChoiceMenuNumber == gameExitNumber {
                 print("게임을 종료합니다.")
-                exitSelectMenu = true
+                isExitSelectMenu = true
             } else {
                 print("입력이 잘못되었습니다.")
                 continue

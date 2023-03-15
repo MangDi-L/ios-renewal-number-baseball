@@ -6,6 +6,6 @@
 
 import Foundation
 
-var playGame = NumberBaseballGame()
+var numberBaseballGame = NumberBaseballGame()
 
-playGame.selectMenu()
+numberBaseballGame.selectMenu()

@@ -160,13 +160,13 @@ struct NumberBaseballGame {
 
             let userChoiceMenuNumber = Int(menuInput.replacingOccurrences(of: " ", with: ""))
 
-
-            if userChoiceMenuNumber == gameStartNumber {
+            switch userChoiceMenuNumber {
+            case gameStartNumber:
                 startBaseBallGame()
-            } else if userChoiceMenuNumber == gameExitNumber {
+            case gameExitNumber:
                 print("게임을 종료합니다.")
                 isExitSelectMenu = true
-            } else {
+            default:
                 print("입력이 잘못되었습니다.")
                 continue
             }

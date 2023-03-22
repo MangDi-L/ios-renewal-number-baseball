@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum InputError: Error {
-    case countError(message: String)
-    case numberError(message: String)
-    case rangeError(message: String)
-}
-
 struct NumberBaseballGame {
     var computerNumbers: [Int] = []
     var userNumbers: [Int] = []

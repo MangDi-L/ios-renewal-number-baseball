@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09ACFEC529CB1DBB009A7F7B /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACFEC429CB1DBB009A7F7B /* InputError.swift */; };
 		09C2787F29C1BB4E000F2D8D /* NumberBaseballGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2787E29C1BB4E000F2D8D /* NumberBaseballGame.swift */; };
 		C7A29CFC2551372B00CAC77A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A29CFB2551372B00CAC77A /* main.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09ACFEC429CB1DBB009A7F7B /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
 		09C2787E29C1BB4E000F2D8D /* NumberBaseballGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBaseballGame.swift; sourceTree = "<group>"; };
 		C7A29CF82551372B00CAC77A /* NumberBaseball */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NumberBaseball; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A29CFB2551372B00CAC77A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				C7A29CFB2551372B00CAC77A /* main.swift */,
 				09C2787E29C1BB4E000F2D8D /* NumberBaseballGame.swift */,
+				09ACFEC429CB1DBB009A7F7B /* InputError.swift */,
 			);
 			path = NumberBaseball;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C2787F29C1BB4E000F2D8D /* NumberBaseballGame.swift in Sources */,
+				09ACFEC529CB1DBB009A7F7B /* InputError.swift in Sources */,
 				C7A29CFC2551372B00CAC77A /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

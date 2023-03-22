@@ -56,7 +56,6 @@ struct NumberBaseballGame {
             let userInput = bringUserInput()
 
             if executeFilter(input: userInput) == false {
-                userNumbers.removeAll()
                 continue
             } else {
                 userNumbers = userInput.compactMap { Int($0) }
@@ -99,6 +98,7 @@ struct NumberBaseballGame {
     func executeFilter(input: [String]) -> Bool {
         do {
             try filter(userInput: input)
+            return true
         } catch InputError.countError(let message) {
             print(message)
             return false
@@ -109,10 +109,9 @@ struct NumberBaseballGame {
             print(message)
             return false
         } catch {
-            print("someError")
+            print("Unexpected error: \(error).")
             return false
         }
-        return true
     }
 
     func filter(userInput: [String]) throws {
@@ -137,18 +136,6 @@ struct NumberBaseballGame {
         }
     }
 
-    func foundBall() -> Int {
-        var ballCount = 0
-        let pairNumbers = zip(userNumbers, computerNumbers)
-
-        for (userNumber, computerNumber) in pairNumbers {
-            if computerNumbers.contains(userNumber) && userNumber != computerNumber {
-                ballCount += 1
-            }
-        }
-        return ballCount
-    }
-
     func foundStrike() -> Int {
         var strikeCount = 0
         let pairNumbers = zip(userNumbers, computerNumbers)
@@ -159,6 +146,18 @@ struct NumberBaseballGame {
             }
         }
         return strikeCount
+    }
+
+    func foundBall() -> Int {
+        var ballCount = 0
+        let pairNumbers = zip(userNumbers, computerNumbers)
+
+        for (userNumber, computerNumber) in pairNumbers {
+            if computerNumbers.contains(userNumber) && userNumber != computerNumber {
+                ballCount += 1
+            }
+        }
+        return ballCount
     }
 
     func checkUserVictory() -> Bool {
